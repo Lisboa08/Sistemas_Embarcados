@@ -1,0 +1,65 @@
+Data: 11/04/2017
+
+1. Com relação ao modelo cliente-servidor, responda:
+	(a) Quais são as características básicas deste modelo?
+	A tecnologia cliente/servidor é uma arquitetura na qual o processamento da informação 
+é dividido em módulos ou processos distintos. Um processo é responsável pela manutenção 
+da informação (servidores) e outros responsáveis pela obtenção dos dados (os clientes).
+	Os processos cliente enviam pedidos para o processo servidor, e este por sua vez processa 
+e envia os resultados dos pedidos.
+	É no servidor que normalmente ficam os sistemas mais pesados da rede, tais como o 
+banco de dados. As máquinas clientes são menos poderosas, pois não rodam aplicativos que 
+requerem tantos recursos das máquinas.
+	O importante em uma máquina em arquitetura Cliente/Servidor não é que todas as 
+máquinas sejam do mesmo fabricante ou do mesmo tipo. O que realmente é importante, é o 
+fato de todas as máquinas poderem se interligar pela rede, com o mesmo tipo de protocolo 
+de acesso (TCP/IP, NetBEUI).
+
+	(b) Quais são as características básicas do servidor?
+	(c) Quais são as características básicas do cliente?
+
+2.  Com relação ao protocolo de comunicação da internet, responda:
+	(a) O que são protocolos de comunicação?
+um protocolo é uma convenção que controla e possibilita uma conexão, comunicação, 
+transferência de dados entre dois sistemas computacionais. De maneira simples, um 
+protocolo pode ser definido como "as regras que governam" a sintaxe, semântica e s
+incronização da comunicação.
+	(b) Quais são as características básicas de protocolos de comunicação?
+Os protocolos variam muito em propósito e sofistificação. A maioria dos protocolos 
+especifica uma ou mais das seguintes propriedades:
+- detecção da conexão física subjacente ou a existência de um nó;
+-handshaking (estabelecimento de ligação);
+-negociação de várias características de uma conexão;
+-como iniciar e finalizar uma mensagem;
+-como formatar uma mensagem;
+-o que fazer com mensagens corrompidas ou mal formatadas;
+-como detectar perda inesperada de conexão e o que fazer em seguida;
+-término de sessão ou conexão
+
+3. Com relação ao protocolo TCP, responda:
+	(a) O que são portas no protocolo TCP?
+O protocolo TCP
+
+A comunicação pela internet é feita, basicamente, através de protocolos, 
+sendo o TCP (Transmission Control Protocol) um dos mais importantes deles. 
+Isso porque o TCP está incluído no conjunto de protocolos que formam o TCP/IP, 
+a base de comunicação via dados de toda a internet.
+
+Protocolo UDP
+
+O UDP (User Datagram Protocol) é tido como um protocolo "irmão" do TCP, mas é mais 
+simples e também menos confiável. Isso acontece porque o funcionamento do TCP é, 
+como já dito, baseado em conexões, o que não ocorre com o UDP. Como conseqüência, 
+não há procedimentos de verificação no envio e recebimento de dados (todavia, pode 
+haver checagem de integridade) e se algum pacote não for recebido, o computador de 
+destino não faz uma nova solicitação, como acontece com o TCP. Tudo isso faz do UDP 
+um pouco mais rápido, porém inutilizável em certas aplicações.
+
+Todas essas aplicações fazem uso da sua conexão à internet, mas como o computador 
+faz para saber quais os dados que pertencem a cada programa? Simples, pelo número 
+da porta que cada um utiliza. Por exemplo, se você está usando um programa de 
+FTP (File Transfer Protocol), a conexão à internet é feita pela porta TCP 21, que 
+é uma porta convencionada a este protocolo. Se estiver baixando arquivos pelo BitTorrent,
+ uma das portas que vão de 6881 à 6889 estará sendo utilizada para tal atividade.
+
+	(b) Para que servem estas portas?

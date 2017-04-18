@@ -1,0 +1,69 @@
+Data: 28/03/2017
+
+1. Como se utiliza o comando 'ps' para:
+
+	utilizando-se a ajuda $man ps:
+	
+	(a) Mostrar todos os processos rodando na máquina?
+
+		Alguns exemplos:
+		  ps -e
+		  ps -ef
+		  ps -eF
+		  ps -ely
+		  ps ax
+		  ps axu
+		  ps -A
+	
+	(b) Mostrar os processos de um usuário?
+	
+	(c) Ordenar todos os processos de acordo com o uso da CPU?
+	(d) Mostrar a quanto tempo cada processo está rodando?
+
+2. De onde vem o nome fork()?
+Vem do inglês que significa "bifurcação".
+
+3. Quais são as vantagens e desvantagens em utilizar:
+	(a) system()?
+		Vantagem: executar uma linha de comando pelo código em c;
+		Desvantagem: dá brechas à falhas de execução, pois depende muito do sistema.
+	
+	(b) fork() e exec()?
+		Vantagens: a função fork() cria uma cópia do processo atual e em seguida a função exec() que substitui o 
+		conteúdo do novo processo por um novo programa.		
+		Desvantagens: ter cautela dos dois processos gerados não mexerem na mesma variável ou aqruivo .
+4. É possível utilizar o exec() sem executar o fork() antes?
+
+5. Quais são as características básicas das seguintes funções:
+exec é uma chamada de sistema
+-Verifica as permissões de execução do comando;
+-Verifica se o tamanho do código e segmento de dados do comando é menor que o do processo em questão ( de modo a garantir que o novo comando não é carregado e o código do processo é sobreposto);
+-Liberta memória antiga e aloca novo bloco de memória;
+-Modifica mapa de memória;
+-Actualiza entrada da tabela;
+-Informa o scheduler que o processo está pronto para ser executado.
+	(a) execp()?
+	(b) execv()?
+Executa um programa, tendo a variável caminho, o local onde o ficheiro executável se encontra.
+O primeiro argumento deve ter o nome do ficheiro executável. A função recebe todos os argumentos num array de strings.
+	(c) exece()
+	(d) execvp()?
+Estas duas funções recebem como parâmetros o nome do ficheiro executável (também podemos utilizar o caminho 
+completo para executar o ficheiro). Se a variável ficheiro não contém um caminho, o ficheiro executável 
+vai ser procurado nos directórios especificados na variável ambiente PATH.
+	(e) execve()?
+"Passa" para o programa as variáveis ambiente.
+	(f) execle()?
+"Passa" para o programa as variáveis ambiente.
+
+L: lista de argumentos [execl(), execle() e execlp()]. 
+	Os argumentos que serão recebidos em argv são listados um a um como parâmetros da função em forma de string.
+V: vetor de argumentos [execv(), execve() e execvp()]. 
+	Os argumentos que serão recebidos em argv são passados em um vetor do tipo char* que já contém todas as strings previamente carregadas.
+E: variáveis de ambiente [execle() e execve()]. 
+	O último parâmetro destas funções é um vetor para strings (char *) que será recebido pelo novo programa no argumento 
+	envp contendo variáveis de ambiente pertinentes para sua execução. Para as versões sem a letra “e“, o ambiente é 
+	adquirido a partir de uma variável externa (extern char **environ) já declarada na biblioteca unistd.h.
+P: utilização da variável de ambiente PATH [execlp() e execvp()]. Esta função irá buscar a nova imagem do processo 
+	nos diretórios contidos na variável PATH. Para as versões sem a letra “p“, deverá ser passada uma string contendo 
+	o caminho completo para o arquivo executável.

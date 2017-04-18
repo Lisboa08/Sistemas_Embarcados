@@ -1,0 +1,29 @@
+Data: 06/04/2017
+
+1. Apresente as características e utilidades das seguintes funções:
+	(a) popen()
+a função abre um processo por criar um pipe, com fork. Como o pipe é unidirecional o tipo do argumento deve ser especificado.
+
+	(b) pclose()
+a função espera o processo associado terminar e retorna o estatus da saida de comando como retornado por wait4(2).
+	(c) fileno()
+a função examina o argumento stream e o retorna descritor inteiro
+ The fileno() function shall return the integer file descriptor
+       associated with the stream pointed to by stream.
+
+2. Quais são as vantagens e desvantagens em utilizar:
+	(a) popen()?
+É muito complicado criar um pipe e executar um processo por exec* somente para 
+obter sua saída. Vendo que isso é muito comum, criou-se a função popen(), que 
+realiza automaticamente a tarefa de criar um novo processo (fork), executar um 
+programa em cima desse novo processo (exec*) e esperar o comando terminar (wait).
+$ man popen
+       #include <stdio.h>
+       FILE *popen(const char *command, const char *type);
+
+Essa função é semelhante a função fopen(). Ambas retornam uma 
+stream FILE* e as operações sobre esse tipo são feitas por funções como fwrite(), fread(), fgets(), etc.
+
+	(b) exec()?
+A função exec ( ) tem por finalidade executar um programa externo.
+Se vc quiser executar algum programa ou script, é só utilizar essa função.
