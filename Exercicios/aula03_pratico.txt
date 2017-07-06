@@ -45,24 +45,24 @@ Para todas as questões, compile-as com o gcc e execute-as via terminal.
 
 3. Apresente os comportamentos do código anterior nos seguintes casos:
 	(a) Se o usuário insere mais de um nome.
-    $Digite o seu nome: Arthur Komatsu
-    $Ola Arthur
+    $Digite o seu nome: Vinicius Lisboa
+    $Ola Vinicius
     
 	(b) Se o usuário insere mais de um nome entre aspas. Por exemplo:
-    $Digite o seu nome: "Arthur Komatsu"
-    $Ola "Arthur
+    $Digite o seu nome: "Vinicius Lisboa"
+    $Ola "Vinicius
     
 	(c) Se é usado um pipe. Por exemplo:
-		$echo Arthur | ./a.out
+		$echo Vinicius | ./a.out
     $Ola Arthur
     
 	(d) Se é usado um pipe com mais de um nome. Por exemplo:
-		$echo Arthur Komatsu | ./a.out
+		$echo Vinicius Lisboa | ./a.out
     $Ola Arthur
     
 	(e) Se é usado um pipe com mais de um nome entre parênteses. Por exemplo:
-		$echo "Arthur Komatsu" | ./a.out
-    $Ola Arthur
+		$echo "Vinicius Lisboa" | ./a.out
+    $Ola Vinicius
     
 	(f) Se é usado o redirecionamento de arquivo. Por exemplo:
 		$echo mundo cruel! > ola.txt
@@ -86,23 +86,23 @@ Para todas as questões, compile-as com o gcc e execute-as via terminal.
 
 5. Apresente os comportamentos do código anterior nos seguintes casos:
 	(a) Se o usuário insere mais de um nome.
-		$./a.out Arthur Komatsu
-		$Ola Arthur
+		$./a.out Vinicius Lisboa
+		$Ola Vinicius
 		
 	(b) Se o usuário insere mais de um nome entre aspas. Por exemplo:
-		$./a.out "Arthur Komatsu"
-		$Ola Arthur
+		$./a.out "Vinicius Lisboa"
+		$Ola Vinicius
 		
 	(c) Se é usado um pipe. Por exemplo:
-		$echo Arthur | ./a.out
+		$echo Vinicius | ./a.out
 		$Ola (null)
 		
 	(d) Se é usado um pipe com mais de um nome. Por exemplo:
-		$echo Arthur Komatsu | ./a.out
+		$echo Vinicius Lisboa | ./a.out
 		$Ola (null)
 		
 	(e) Se é usado um pipe com mais de um nome entre aspas. Por exemplo:
-		$echo "Arthur Komatsu" | ./a.out
+		$echo "Vinicius Lisboa" | ./a.out
 		$Ola (null)
 		
 	(f) Se é usado o redirecionamento de arquivo. Por exemplo:
@@ -184,12 +184,12 @@ Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um a
 	
 	terminal:
 	$gcc num_caracs2.c num_caracs.o
-	$./a.out Arthur Luis Komatsu Aroeira
+	$./a.out Vinicius Lisboa do Nascimento
 	Argumento: ./a.out / Numero de caracteres: 7
-	Argumento: Arthur / Numero de caracteres: 6
-	Argumento: Luis / Numero de caracteres: 4
-	Argumento: Komatsu / Numero de caracteres: 7
-	Argumento: Aroeira / Numero de caracteres: 7
+	Argumento: Vinicius / Numero de caracteres: 8
+	Argumento: Lisboa / Numero de caracteres: 6
+	Argumento: Do / Numero de caracteres: 2
+	Argumento: Nascimento / Numero de caracteres: 10
 
 10. Crie um Makefile para a questão anterior.
 	Makefile:
@@ -197,15 +197,15 @@ Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um a
 	num_caracs:
 		gcc -c num_caracs.c
 		gcc num_caracs2.c num_caracs.o
-		./a.out Arthur Luis Komatsu Aroeira
+		./a.out Vinicius Lisboa do Nascimentoa
 		
 	terminal:
 	$make num_caracs
 	Argumento: ./a.out / Numero de caracteres: 7
-	Argumento: Arthur / Numero de caracteres: 6
-	Argumento: Luis / Numero de caracteres: 4
-	Argumento: Komatsu / Numero de caracteres: 7
-	Argumento: Aroeira / Numero de caracteres: 7
+	Argumento: Vinicius / Numero de caracteres: 8
+	Argumento: Lisboa / Numero de caracteres: 6
+	Argumento: do / Numero de caracteres: 2
+	Argumento: Nascimento / Numero de caracteres: 10
 
 11. Re-utilize o objeto criado na questão 8 para criar um código que imprime o total de caracteres nos argumentos de entrada. Por exemplo, considerando que o código criado recebeu o nome de 'ola_num_caracs_2':
 	programa:
@@ -222,8 +222,8 @@ Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um a
 	
 	terminal:
 	$gcc num_caracs2.c num_caracs.o
-	$./a.out Arthur Luis Komatsu Aroeira
-	$Total de caracteres de entrada: 31
+	$./a.out Vinicius Lisboa do Nascimento
+	$Total de caracteres de entrada: 26
 
 12. Crie um Makefile para a questão anterior.
 	Makefile:
@@ -231,7 +231,7 @@ Salve-a em um arquivo separado chamado 'num_caracs.c'. Salve o protótipo em um a
 	num_caracs:
 		gcc -c num_caracs.c
 		gcc num_caracs2.c num_caracs.o
-		./a.out Arthur Luis Komatsu Aroeira
+		./a.out Vinicius Lisboa do Nascimento
 		
 	terminal:
 	$make num_caracs

@@ -46,7 +46,7 @@ bin/   dev/  home/  lib64/       media/  opt/   root/  sbin/  sys/  usr/
 boot/  etc/  lib/   lost+found/  mnt/    proc/  run/   srv/   tmp/  var/
 
 5. Descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
-arthurkomatsu@debian:/$ cal -d 2007-11
+$ cal -d 2007-11
    November 2007      
 Su Mo Tu We Th Fr Sa  
              1  2  3  
@@ -58,7 +58,7 @@ Su Mo Tu We Th Fr Sa
 Para as questões a seguir, use a pasta no endereço https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Questoes/Arqs_aula_02.zip
 
 6. Liste somente os arquivos com extensão .txt.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep ".txt"
+$ ls | grep ".txt"
 arquivo.txt
 cal_1990.txt
 cal_1991.txt
@@ -95,7 +95,7 @@ cal.txt
 cal_types.txt
 
 7. Liste somente os arquivos com extensão .png.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep ".png"
+$ ls | grep ".png"
 BusinessTux.png
 linux1.png
 linux2.png
@@ -109,18 +109,18 @@ TUX.png
 xanderrun-tux-construction-8454.png
 
 8. Liste somente os arquivos com extensão .jpg.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep ".jpg"
+$ ls | grep ".jpg"
 d36f1a2be6a927ac3e2e1e4eacdedded.jpg
 oRva1OGD_400x400.jpg
 oRva1OGD.jpg
 zz39112bb5.jpg
 
 9. Liste somente os arquivos com extensão .gif.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep ".gif"
+$ ls | grep ".gif"
 1086970.gif
 
 10. Liste somente os arquivos que contenham o nome 'cal'.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep "cal"
+$ ls | grep "cal"
 cal_1990.txt
 cal_1991.txt
 cal_1992.txt
@@ -156,10 +156,10 @@ cal.txt
 cal_types.txt
 
 11. Liste somente os arquivos que contenham o nome 'tux'.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep "tux"
+$ ls | grep "tux"
 tux-linux-professional_0-100520358-orig.png
 xanderrun-tux-construction-8454.png
 
 12. Liste somente os arquivos que comecem com o nome 'tux'.
-arthurkomatsu@debian:~/Downloads/Arqs_aula_02$ ls | grep -E ^tux
+$ ls | grep -E ^tux
 tux-linux-professional_0-100520358-orig.png
